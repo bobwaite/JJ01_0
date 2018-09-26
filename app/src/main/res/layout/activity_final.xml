@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:visibility="visible"
+    tools:context=".activityFinal">
+
+    <!--    android:focusableInTouchMode="true"-->
+
+    <TextView
+        android:id="@+id/P1TotalScoreLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/player1total"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:hint="@string/zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/P1TotalScoreText"
+        android:layout_width="85dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/zero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P1TotalScoreLabelText"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/P1WinsLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:text="@string/wins"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P1TotalScoreText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/P1WinsText"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/zero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P1WinsLabelText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/P1BetsLabelText"
+        android:layout_width="57dp"
+        android:layout_height="31dp"
+        android:text="@string/bet"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P1WinsText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/P1BetText"
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLines="1"
+        android:text=""
+        android:hint="@string/zero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P1BetsLabelText"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:padding="2dp"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/P2TotalScoreLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/player2total"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/P1TotalScoreLabelText" />
+
+    <TextView
+        android:id="@+id/P2TotalScoreText"
+        android:layout_width="85dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/zero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P2TotalScoreLabelText"
+        app:layout_constraintTop_toBottomOf="@id/P1TotalScoreText" />
+
+    <TextView
+        android:id="@+id/P2WinsLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wins"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P2TotalScoreText"
+        app:layout_constraintTop_toBottomOf="@id/P1WinsLabelText" />
+
+    <TextView
+        android:id="@+id/P2WinsText"
+        android:layout_width="69dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/zero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P2WinsLabelText"
+        app:layout_constraintTop_toBottomOf="@+id/P1WinsText"
+        tools:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/P2BetsLabelText"
+        android:layout_width="58dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/bet2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P2WinsText"
+        app:layout_constraintTop_toBottomOf="@id/P1WinsText"
+        tools:text="BET" />
+
+    <EditText
+        android:id="@+id/P2BetText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:inputType="number"
+        android:text=""
+        android:hint="@string/zero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/P2BetsLabelText"
+        app:layout_constraintTop_toBottomOf="@id/P1BetText"
+        tools:padding="2dp"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/TiesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/ties"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/P2TotalScoreLabelText" />
+
+    <TextView
+        android:id="@+id/TiesText"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/zero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/P1GameScoreLabelText"
+        app:layout_constraintTop_toBottomOf="@+id/P2TotalScoreLabelText" />
+
+
+    <TextView
+        android:id="@+id/P1GameScoreLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/player1game"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TiesLabel" />
+
+    <TextView
+        android:id="@+id/P2GameScoreLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/player2game"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/P1GameScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/P2BetsLabelText" />
+
+    <TextView
+        android:id="@+id/P1GameScoreText"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/P1GameScoreLabelText"
+        app:layout_constraintTop_toBottomOf="@+id/TiesLabel"
+        tools:hint="0"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/P2GameScoreText"
+        android:layout_width="79dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="32dp"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/P2GameScoreLabelText"
+        app:layout_constraintTop_toBottomOf="@+id/TiesLabel"
+        tools:hint="0"
+        tools:text="0" />
+
+    <Button
+        android:id="@+id/buttonP2RightF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/roundedgreen"
+        android:onClick="buttonFinalOnClick"
+        android:text="@string/playerright"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonP1RightF" />
+
+    <Button
+        android:id="@+id/buttonP1WrongF"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/roundedred"
+        android:onClick="buttonFinalOnClick"
+        android:text="@string/wrong"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TiesLabel" />
+
+    <Button
+        android:id="@+id/buttonP1RightF"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/roundedgreen"
+        android:onClick="buttonFinalOnClick"
+        android:text="@string/right"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TiesLabel" />
+
+    <Button
+        android:id="@+id/buttonRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedred"
+        android:onClick="buttonFinalOnClick"
+        android:text="@string/record"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonP2WrongF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/roundedred"
+        android:onClick="buttonFinalOnClick"
+        android:text="@string/wrong"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonP1WrongF" />
+
+</android.support.constraint.ConstraintLayout>

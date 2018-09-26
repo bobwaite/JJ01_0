@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scoresText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonP2Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="488dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="104dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="@string/right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonP1RightF" />
+
+    <Button
+        android:id="@+id/buttonP1Wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="@string/wrong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/betsRadioGroup" />
+
+    <Button
+        android:id="@+id/buttonP1Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="488dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="@string/right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/betsRadioGroup" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="119dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFinal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:menu="@menu/navigation" />
+
+    <RadioGroup
+        android:id="@+id/betsRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
+            android:text="@string/two_hundred"
+            tools:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/radioButton400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_dark"
+            android:text="@string/four_hundred" />
+
+        <RadioButton
+            android:id="@+id/radioButton600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_dark"
+            android:text="@string/six_hundred" />
+
+        <RadioButton
+            android:id="@+id/radioButton800"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_dark"
+            android:text="@string/eight_hundred" />
+
+        <RadioButton
+            android:id="@+id/radioButton1000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_dark"
+            android:text="@string/one_thousand" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonP2Wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="104dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="@string/wrong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonP1Wrong" />
+
+    <Button
+        android:id="@+id/buttonFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="@string/last"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/P1ScoreText"
+        android:layout_width="85dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="124dp"
+        android:ems="10"
+        android:hint="@string/zero"
+        android:inputType="text"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@+id/buttonP1Wrong"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/buttonP2Right"
+        app:layout_constraintTop_toBottomOf="@+id/dscoreText" />
+
+    <EditText
+        android:id="@+id/dscoreText"
+        android:layout_width="85dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/zero"
+        android:inputType="number"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@+id/buttonP1Wrong"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toEndOf="@+id/buttonP2Right"
+        app:layout_constraintTop_toBottomOf="@+id/betsRadioGroup" />
+
+</android.support.constraint.ConstraintLayout>
